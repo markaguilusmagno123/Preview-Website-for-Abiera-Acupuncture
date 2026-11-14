@@ -1,0 +1,356 @@
+/* =========================================
+   ABIERA CLINIC - ANIMATIONS
+   ========================================= */
+
+
+/* =========================================
+   1. KEYFRAME ANIMATIONS
+   ========================================= */
+
+/* Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade In and Move Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade In from Left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In from Right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Gentle Image Zoom */
+@keyframes imageZoom {
+    from {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Gentle Floating Effect */
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* =========================================
+   2. PAGE ENTRANCE ANIMATIONS
+   ========================================= */
+
+/* Header */
+.header {
+    animation: fadeIn 0.8s ease both;
+}
+
+/* Page Banners */
+.hero,
+.page-banner,
+.about-banner,
+.services-banner {
+    animation: fadeIn 0.9s ease both;
+}
+
+/* Homepage Hero Content */
+.hero-content {
+    animation: fadeInLeft 0.9s ease both;
+}
+
+.hero-image {
+    animation: fadeInRight 1s ease both;
+}
+
+/* General Section Headings */
+.introduction,
+.services-intro,
+.gallery-intro,
+.contact-intro,
+.clinic-philosophy,
+.practitioner-section,
+.clinic-environment {
+    animation: fadeInUp 0.8s ease both;
+}
+
+/* About Page */
+.about-image {
+    animation: fadeInLeft 0.9s ease both;
+}
+
+.about-content {
+    animation: fadeInRight 0.9s ease both;
+}
+
+/* Services Page */
+.service-item:nth-child(odd) .service-image {
+    animation: fadeInLeft 0.8s ease both;
+}
+
+.service-item:nth-child(odd) .service-details {
+    animation: fadeInRight 0.8s ease both;
+}
+
+.service-item:nth-child(even) .service-image {
+    animation: fadeInRight 0.8s ease both;
+}
+
+.service-item:nth-child(even) .service-details {
+    animation: fadeInLeft 0.8s ease both;
+}
+
+/* Contact Page */
+.contact-info {
+    animation: fadeInLeft 0.9s ease both;
+}
+
+.contact-form-container {
+    animation: fadeInRight 0.9s ease both;
+}
+
+
+/* =========================================
+   3. STAGGERED CARD ANIMATIONS
+   ========================================= */
+
+/* Homepage Service Cards */
+.service-card {
+    animation: fadeInUp 0.7s ease both;
+}
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Philosophy Cards */
+.philosophy-card {
+    animation: fadeInUp 0.7s ease both;
+}
+
+.philosophy-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.philosophy-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.philosophy-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Gallery Images */
+.gallery-item {
+    animation: fadeInUp 0.7s ease both;
+}
+
+.gallery-item:nth-child(3n + 1) {
+    animation-delay: 0.1s;
+}
+
+.gallery-item:nth-child(3n + 2) {
+    animation-delay: 0.2s;
+}
+
+.gallery-item:nth-child(3n) {
+    animation-delay: 0.3s;
+}
+
+
+/* =========================================
+   4. IMAGE HOVER ANIMATIONS
+   ========================================= */
+
+.hero-image img,
+.about-image img,
+.service-image img,
+.practitioner-image img,
+.environment-image img {
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover img,
+.about-image:hover img,
+.service-image:hover img,
+.practitioner-image:hover img,
+.environment-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Gallery Hover */
+.gallery-item img {
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =========================================
+   5. BUTTON HOVER ANIMATIONS
+   ========================================= */
+
+.btn,
+.nav-button,
+.contact-submit {
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn:hover,
+.nav-button:hover,
+.contact-submit:hover {
+    transform: translateY(-3px);
+}
+
+/* Social Media Icons */
+.social-icon {
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   6. CARD HOVER ANIMATIONS
+   ========================================= */
+
+.service-card,
+.philosophy-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.philosophy-card:hover {
+    transform: translateY(-6px);
+}
+
+
+/* =========================================
+   7. NAVIGATION ANIMATIONS
+   ========================================= */
+
+.navigation a {
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.menu-toggle span {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================================
+   8. FOOTER ANIMATIONS
+   ========================================= */
+
+.footer-links a,
+.footer-contact-item,
+.footer-social a {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   9. ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* HEADER SCROLL EFFECT */
+
+.header {
+    transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: rgba(251, 245, 229, 0.97);
+}
